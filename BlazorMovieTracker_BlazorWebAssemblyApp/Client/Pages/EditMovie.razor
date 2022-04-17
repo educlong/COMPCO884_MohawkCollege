@@ -1,0 +1,19 @@
+﻿@page "/editmovie/{id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavManager  
+<h3>Edit Movie</h3>
+<MovieForm ButtonText="Update" movie="movie" OnValidSubmit="EditMovieAsync"/>
+@code {
+    [Parameter]
+    public int id { get; set; }
+    Movie movie = new Movie();
+    protected override async Task OnParametersSetAsync()
+    {
+        movie = await Http.GetFromJsonAsync<Movie>($"movies/{id}");
+    }
+    async Task EditMovieAsync()
+    {
+        await Http.PutAsJsonAsync($"movies/{movie.Id}", movie);
+        NavManager.NavigateTo("/");
+    }
+}

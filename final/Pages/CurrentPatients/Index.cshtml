@@ -1,0 +1,59 @@
+﻿@page
+@model final.Pages.CurrentPatients.IndexModel
+
+@{
+    ViewData["Title"] = "Current Patients";
+}
+
+<h1>@ViewBag.Title</h1>
+<form>
+    <p>
+        Nursing Unit:
+        <select asp-for="_NursingUnit" asp-items="Model.NursingUnit" onchange="submit()">
+            <option value="">All Nursing Unit</option>
+        </select>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Admission[0].Patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admission[0].PrimaryDiagnosis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admission[0].NursingUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admission[0].Room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admission[0].Bed)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Admission)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Patient.FirstName) @Html.DisplayFor(modelItem => item.Patient.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimaryDiagnosis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NursingUnit.NursingUnitId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bed)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

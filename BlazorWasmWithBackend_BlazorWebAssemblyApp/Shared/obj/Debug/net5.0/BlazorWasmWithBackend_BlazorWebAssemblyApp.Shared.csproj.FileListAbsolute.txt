@@ -1,0 +1,12 @@
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.deps.json
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\ref\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.pdb
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.AssemblyInfoInputs.cache
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.AssemblyInfo.cs
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\ref\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.pdb
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorWasmWithBackend_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorWasmWithBackend_BlazorWebAssemblyApp.Shared.csprojAssemblyReference.cache

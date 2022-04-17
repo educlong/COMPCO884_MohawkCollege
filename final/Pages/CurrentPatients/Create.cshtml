@@ -1,0 +1,71 @@
+﻿@page
+@model final.Pages.CurrentPatients.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Admission</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Admission.PatientId" class="control-label"></label>
+                <select asp-for="Admission.PatientId" class ="form-control" asp-items="ViewBag.PatientId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.AdmissionDate" class="control-label"></label>
+                <input asp-for="Admission.AdmissionDate" class="form-control" />
+                <span asp-validation-for="Admission.AdmissionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.DischargeDate" class="control-label"></label>
+                <input asp-for="Admission.DischargeDate" class="form-control" />
+                <span asp-validation-for="Admission.DischargeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.PrimaryDiagnosis" class="control-label"></label>
+                <input asp-for="Admission.PrimaryDiagnosis" class="form-control" />
+                <span asp-validation-for="Admission.PrimaryDiagnosis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.SecondaryDiagnoses" class="control-label"></label>
+                <input asp-for="Admission.SecondaryDiagnoses" class="form-control" />
+                <span asp-validation-for="Admission.SecondaryDiagnoses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.AttendingPhysicianId" class="control-label"></label>
+                <select asp-for="Admission.AttendingPhysicianId" class ="form-control" asp-items="ViewBag.AttendingPhysicianId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.NursingUnitId" class="control-label"></label>
+                <select asp-for="Admission.NursingUnitId" class ="form-control" asp-items="ViewBag.NursingUnitId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.Room" class="control-label"></label>
+                <input asp-for="Admission.Room" class="form-control" />
+                <span asp-validation-for="Admission.Room" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admission.Bed" class="control-label"></label>
+                <input asp-for="Admission.Bed" class="form-control" />
+                <span asp-validation-for="Admission.Bed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

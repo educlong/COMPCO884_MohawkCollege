@@ -1,0 +1,36 @@
+﻿@page "/genres"
+@inject HttpClient Http 
+<h1>Genres</h1>
+
+@if(genres==null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Genre</td>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var genre in genres)
+                {
+                    <tr>
+                        <td>@genre.GenreDescription</td>
+                        <td>@genre.MovieCount</td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Genre[] genres;
+    protected override async Task OnInitializedAsync()
+    {
+        genres = await Http.GetFromJsonAsync<Genre[]>("genres");
+    }
+}

@@ -1,0 +1,18 @@
+﻿<h1>Hello from Other Controller / Post</h1>
+@*Comment*@
+<h2>year = @ViewBag.year</h2>
+<h2>month = @ViewBag.month</h2>
+<h2>key = @ViewData["Key"]</h2>
+<h2>Today: @DateTime.Now</h2>
+<h2>Week ago: @(DateTime.Now-TimeSpan.FromDays(7))</h2>
+@{ 
+    var name = "Paul Long";
+    var len = name.Length;
+}
+<h3>The length of @name is @len bytes.</h3>
+<ul>
+    @for(int i = 0; i < ViewBag.month; i++)
+            {
+                <li>Month @(i+1) is @(new DateTime(2021, i+1,1).ToString("MMMM"))</li>
+            }
+</ul>

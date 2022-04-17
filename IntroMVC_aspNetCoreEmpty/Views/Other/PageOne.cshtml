@@ -1,0 +1,18 @@
+﻿@model IntroMVC_aspNetCoreEmpty.Models.Person
+@{ 
+    Layout = "_Layout";
+    ViewBag.Title = "Page One";
+}
+<div class="text-center">
+    <div class="display-4">This is page one</div>
+</div>
+<dl>
+    <dt>Id</dt>
+    <dt>@Model.Id</dt>
+    <dt>FirstName</dt>
+    <dt>@Model.FirstName</dt>
+    <dt>LastName</dt>
+    <dt>@Model.LastName</dt>
+    <dt>Date of Birth</dt>
+    <dt>@Model.DateOfBirth</dt>
+</dl>

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Hospital_aspNetCoreWebApp_ModelViewControl.Models.Admission>
+
+<h1>@ViewBag.Title</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-action="Index" method="get">
+    <p>
+        Nursing Unit Manager:
+        @Html.DropDownList("nursingUnitId", (IEnumerable<SelectListItem>)ViewBag.NursingUnitId,
+         "All Current Admissions", new { onchange = "submit()" });
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrimaryDiagnosis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondaryDiagnoses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NursingUnit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient.LastName), @Html.DisplayFor(modelItem => item.Patient.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryDiagnosis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryDiagnoses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NursingUnitId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.PatientId, admissionDate = item.AdmissionDate }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PatientId, admissionDate = item.AdmissionDate }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PatientId, admissionDate = item.AdmissionDate })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

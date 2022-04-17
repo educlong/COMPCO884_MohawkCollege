@@ -1,0 +1,18 @@
+﻿@page "/addmovie"
+@inject HttpClient Http
+@inject NavigationManager NavManager  
+<h3>AddMovie</h3>
+<MovieForm ButtonText="Add" movie="movie" OnValidSubmit="AddMovieAsync
+           "/>
+@code {
+    Movie movie = new Movie();
+    async Task AddMovieAsync()
+    {
+        if (movie.GenreId == null)
+        {
+            movie.GenreId = 1;
+        }
+        await Http.PostAsJsonAsync("movies", movie);
+        NavManager.NavigateTo("/");
+    }
+}

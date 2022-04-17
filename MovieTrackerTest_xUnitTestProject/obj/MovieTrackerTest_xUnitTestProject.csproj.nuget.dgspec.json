@@ -1,0 +1,177 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTrackerTest_xUnitTestProject\\MovieTrackerTest_xUnitTestProject.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTrackerTest_xUnitTestProject\\MovieTrackerTest_xUnitTestProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTrackerTest_xUnitTestProject\\MovieTrackerTest_xUnitTestProject.csproj",
+        "projectName": "MovieTrackerTest_xUnitTestProject",
+        "projectPath": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTrackerTest_xUnitTestProject\\MovieTrackerTest_xUnitTestProject.csproj",
+        "packagesPath": "C:\\Users\\PAUL LONG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTrackerTest_xUnitTestProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\CodDevProgConfig\\VisualStudio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PAUL LONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTracker_aspNetCoreWebApp_MVC\\MovieTracker_aspNetCoreWebApp_MVC.csproj": {
+                "projectPath": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTracker_aspNetCoreWebApp_MVC\\MovieTracker_aspNetCoreWebApp_MVC.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.212\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTracker_aspNetCoreWebApp_MVC\\MovieTracker_aspNetCoreWebApp_MVC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTracker_aspNetCoreWebApp_MVC\\MovieTracker_aspNetCoreWebApp_MVC.csproj",
+        "projectName": "MovieTracker_aspNetCoreWebApp_MVC",
+        "projectPath": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTracker_aspNetCoreWebApp_MVC\\MovieTracker_aspNetCoreWebApp_MVC.csproj",
+        "packagesPath": "C:\\Users\\PAUL LONG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PAUL LONG\\Box\\dotNet\\COMPCO884\\MovieTracker_aspNetCoreWebApp_MVC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\CodDevProgConfig\\VisualStudio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PAUL LONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.212\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

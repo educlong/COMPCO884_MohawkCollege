@@ -1,0 +1,66 @@
+﻿@page "/"
+@inject HttpClient Http 
+@inject IJSRuntime JS 
+<h1>Movies</h1>
+@if(movies==null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <a class="btn btn-primary" href="/addmovie" title="Add"><span class="oi oi-plus"/></a>
+    <p></p>
+    if (movies.Length == 0)
+    {
+        <p><em>No movies found. Click the add button to add a movie</em></p>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date Seen</th>
+                    <th>Genre</th>
+                    <th class="text-right">Rating</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var movie in movies)
+                    {
+                        <tr>
+                            <td>@movie.Title</td>
+                            <td>@(string.Format("{0:yyyy-MM-dd}",movie.DateSeen))</td>
+                            <td>@movie.Genre.GenreDescription</td>
+                            <td class="text-right">@movie.Rating</td>
+                            <td>
+                                <a class="btn btn-primary" href="/editmovie/@movie.Id" title="Edit">
+                                    <span class="oi oi-pencil"/>
+                                </a>
+                                <button class="btn btn-danger" @onclick="(() =>DeleteAsync(movie.Id))" title="Delete">
+                                    <span class="oi oi-trash"/>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+    }
+}
+@code{
+    private Movie[] movies;
+    protected override async Task OnInitializedAsync()
+    {
+        movies = await Http.GetFromJsonAsync<Movie[]>("movies");
+    }
+    async Task DeleteAsync(int id)
+    {
+        Movie movie = movies.First(mov => mov.Id == id);
+        if(await JS.InvokeAsync<bool>("confirm",$"Are you sure you wanna delete {movie.Title}?"))
+        {
+            await Http.DeleteAsync($"movies/{id}");
+            await OnInitializedAsync();
+        }
+    }
+}

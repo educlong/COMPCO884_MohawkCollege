@@ -1,0 +1,107 @@
+﻿@model Hospital_aspNetCoreWebApp_ModelViewControl.Controllers.PaginatedList<Medication>
+
+@{
+    ViewData["Title"] = "Medications";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-action="Index" method="get">
+    <p>
+        Search by Description: <input type="text" name="searchString" value="@ViewBag.CurrentSearch" autofocus />
+        <input type="submit" value="Search" class="btn btn-primary"/>
+        <a asp-action="Index" class="btn btn-primary">All Medications</a>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.DescriptionSortParm" asp-route-searchString="@ViewBag.CurrentSearch">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().MedicationDescription)
+                </a>
+            </th>
+            <th class="text-right">
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.CostSortParm"  asp-route-searchString="@ViewBag.CurrentSearch">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().MedicationCost)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PackageSize)
+            </th>
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().UnitsUsedYtd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().LastPrescribedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicationDescription)
+            </td>
+            <td class="text-right">
+                @Html.DisplayFor(modelItem => item.MedicationCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageSize)
+            </td>
+            <td class="text-right">
+                @Html.DisplayFor(modelItem => item.UnitsUsedYtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPrescribedDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MedicationId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MedicationId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MedicationId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{ 
+    var prevDisabled = Model.HasPreviousPage ? "" : "disabled";
+    var nextDisabled = Model.HasNextPage ? "" : "disabled";
+}
+<ul class="pagination">
+    <li class="page-item @prevDisabled">
+        <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="1"
+           asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">First</a></li>
+    <li class="page-item @prevDisabled">
+        <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="@(Model.PageIndex-1)"
+           asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">Previous</a></li>
+    <li class="page-item @nextDisabled">
+        <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="@(Model.PageIndex+1)"
+           asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">Next</a></li>
+    <li class="page-item @nextDisabled">
+        <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="@Model.TotalPages"
+           asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">Last</a>
+    </li> 
+</ul>
+<ul class="pagination">
+    <li class="page-item @prevDisabled">
+        <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="@(Model.PageIndex-1)"
+           asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">Previous</a>
+    </li>
+    @for (var count = 1; count <= Model.TotalPages; count++)
+    {
+
+        <li class="page-item @(count==Model.PageIndex? "active" :"")">
+            <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="@count"
+               asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">@count</a>
+        </li>
+    }
+    <li class="page-item @nextDisabled">
+        <a asp-action="Index" asp-route-sortOrder="@ViewBag.CurrentSort" asp-route-pageNumber="@(Model.PageIndex+1)"
+           asp-route-currentSearch="@ViewBag.CurrentSearch" class="page-link">Next</a>
+    </li>
+</ul>

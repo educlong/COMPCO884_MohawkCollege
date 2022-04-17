@@ -1,0 +1,40 @@
+﻿@inject HttpClient Http 
+<EditForm Model="movie" OnValidSubmit="OnValidSubmit">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Title</label>
+        <InputText @bind-Value="movie.Title"/>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Date Seen</label>
+        <InputDate @bind-Value="movie.DateSeen"/>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Genre</label>
+        <InputSelect @bind-Value="movie.GenreId">
+            @foreach(var genre in genres)
+            {
+                <option value="@genre.Id">@genre.GenreDescription</option>
+            }
+        </InputSelect>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Rating</label>
+        <InputNumber @bind-Value="movie.Rating" placeholder="1 to 10"/>
+    </div>
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <button type="submit" class="btn btn-primary">@ButtonText</button>
+</EditForm>
+@code {
+    [Parameter]
+    public Movie movie { get; set; }
+    [Parameter]
+    public string ButtonText { get; set; }
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+    private List<Genre> genres = new List<Genre>();
+    protected override async Task OnInitializedAsync()
+    {
+        genres = await Http.GetFromJsonAsync<List<Genre>>("genres");
+    }
+}

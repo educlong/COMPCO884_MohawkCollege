@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Blog_aspNetCoreWebApp_ModelViewControll.Models.Post>
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<h1>@ViewBag.Title</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.body)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.body)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{ 
+    var preDisabled = ViewBag.Page == 1 ? "disabled" : "";
+    var nextDisabled = ViewBag.Page == ViewBag.TotalPages ? "disabled" : "";
+}
+<ul class="pagination">
+    <li class="page-item @preDisabled"><a class="page-link" asp-action="Index" asp-route-page="1">First</a></li>
+    <li class="page-item @preDisabled"><a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.Page-1)">Previous</a></li>
+    <li class="page-item @nextDisabled"><a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.Page+1)">Next</a></li>
+    <li class="page-item @nextDisabled"><a class="page-link" asp-action="Index" asp-route-page="@ViewBag.TotalPages">Last</a></li>
+</ul>

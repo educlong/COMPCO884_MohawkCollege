@@ -1,0 +1,12 @@
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.deps.json
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\ref\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\bin\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.pdb
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.csprojAssemblyReference.cache
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.AssemblyInfoInputs.cache
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.AssemblyInfo.cs
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\ref\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.dll
+C:\Users\PAUL LONG\Box\dotNet\COMPCO884\BlazorMovieTracker_BlazorWebAssemblyApp\Shared\obj\Debug\net5.0\BlazorMovieTracker_BlazorWebAssemblyApp.Shared.pdb
